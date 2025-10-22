@@ -51,6 +51,7 @@ php artisan key:generate
 php artisan config:cache
 php artisan config:route
 php artisan config:view
+php artisan storage:link
 ```
 
 ### Set correct permissions
@@ -101,8 +102,15 @@ nginx -t
 systemctl reload nginx
 ```
 
+### Secure n8n with SSL
+Use Let’s Encrypt to enable HTTPS. It's completly free.
+
+```shell
+certbot --nginx -d yourlaravelsite.com
+```
+
 If all goes fine, your Laravel application should now be live at:
-👉 http://yourlaravelsite.com
+👉 https://yourlaravelsite.com
 
 # About me
 I’m a passionate web developer with experience in building scalable and secure applications. I specialize in Laravel, Django, JavaScript and server management with Nginx. I enjoy automating workflows, optimizing performance, and deploying modern web solutions on VPS environments. I believe in clean code, continuous learning, and sharing knowledge through open-source contributions.

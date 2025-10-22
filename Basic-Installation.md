@@ -141,8 +141,19 @@ ln -s /etc/nginx/sites-available/subdomain_for_phpmyadmin.yourdomain.com /etc/ng
 nginx -t && systemctl reload nginx
 ```
 
+## Secure with SSL
+Use Let’s Encrypt to enable HTTPS. It's completly free.
+### Install Encrypt
+```shell
+apt install -y certbot python3-certbot-nginx
+```
+Get a certificate for your domain 
+```shell
+certbot --nginx -d subdomain_for_phpmyadmin.yourdomain.com
+```
+
 If all goes fine, your phpMyAdmin database should now be live at:
-👉 http://subdomain_for_phpmyadmin.yourdomain.com
+👉 https://subdomain_for_phpmyadmin.yourdomain.com
 
 # About me
 I’m a passionate web developer with experience in building scalable and secure applications. I specialize in Laravel, Django, JavaScript and server management with Nginx. I enjoy automating workflows, optimizing performance, and deploying modern web solutions on VPS environments. I believe in clean code, continuous learning, and sharing knowledge through open-source contributions.
