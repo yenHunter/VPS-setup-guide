@@ -1,7 +1,7 @@
 # VPS Basic Installation
 Welcome to VPS basic installation setup guide.
 
-## Update & Upgrade
+### Update & Upgrade
 
 This will update and upgrade existing librarys and applications of Ubuntu (LTS)
 
@@ -34,24 +34,28 @@ apt install php php-fpm php-mysql php-cli php-mbstring php-xml php-curl php-zip 
 ```
 
 ### Install Unzip, Git, Curl, Ufw, Composer
-- Unzip – Extracts compressed .zip files.
-- Git – Version control system for tracking code changes.
-- Curl – Transfers data from or to a server via command line.
-- UFW – Simplifies firewall management in Linux.
-- Composer – Dependency manager for PHP projects.
+Unzip – Extracts compressed .zip files.
 
 ```shell
 apt install unzip -y
 ```
+Git – Version control system for tracking code changes.
+
 ```shell
 apt install git -y
 ```
+Curl – Transfers data from or to a server via command line.
+
 ```shell
 apt install curl -y
 ```
+UFW – Simplifies firewall management in Linux.
+
 ```shell
 apt install ufw -y
 ```
+Composer – Dependency manager for PHP projects.
+
 ```shell
 apt install composer -y
 ```
@@ -64,7 +68,7 @@ After installing MySQL, you should secure your database by setting a strong root
 mysql
 ```
 
-# Set root password
+### Set root password
 
 This command changes the root user’s password using the secure caching_sha2_password authentication method.
 
@@ -73,7 +77,7 @@ ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'your_str
 exit
 ```
 
-# Run MySQL security script
+### Run MySQL security script
 
 This script helps improve database security by removing test databases, anonymous users, and disabling remote root login.
 
@@ -81,7 +85,7 @@ This script helps improve database security by removing test databases, anonymou
 mysql_secure_installation
 ```
 
-# Create new MySQL user
+### Create new MySQL user
 
 Log back into MySQL and create a new user with a secure password.
 
@@ -91,7 +95,7 @@ CREATE USER 'user_name'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'yo
 exit
 ```
 
-## Install and Configure phpMyAdmin
+### Install and Configure phpMyAdmin
 
 phpMyAdmin is a free and open-source administration tool for managing MySQL and MariaDB through a web interface. It allows you to perform database operations such as creating, modifying, and deleting databases, tables, and users easily.
 
@@ -136,3 +140,15 @@ Enable the configuration and reload Nginx:
 ln -s /etc/nginx/sites-available/subdomain_for_phpmyadmin.yourdomain.com /etc/nginx/sites-enabled/
 nginx -t && systemctl reload nginx
 ```
+
+If all goes fine, your phpMyAdmin database should now be live at:
+👉 http://subdomain_for_phpmyadmin.yourdomain.com
+
+# About me
+I’m a passionate web developer with experience in building scalable and secure applications. I specialize in Laravel, Django, JavaScript and server management with Nginx. I enjoy automating workflows, optimizing performance, and deploying modern web solutions on VPS environments. I believe in clean code, continuous learning, and sharing knowledge through open-source contributions.
+
+## Connect & Support
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/firoz-ebna-jobaier)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-Support-yellow?style=for-the-badge&logo=buymeacoffee)](buymeacoffee.com/yenHunter)
+[![Fork me on GitHub](https://img.shields.io/badge/Fork_on_GitHub-000?style=for-the-badge&logo=github)](https://github.com/yenHunter)
