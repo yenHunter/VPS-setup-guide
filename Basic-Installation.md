@@ -94,6 +94,29 @@ mysql -u root -p
 CREATE USER 'user_name'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'your_strong_password';
 exit
 ```
+## Disable apache2 and enable Nginx
+By default apache2 is the default webserver. You need to disable it to avoide conflict with Nginx.
+
+### Check if apache2 is running or not
+```shell
+systemctl status apache2
+```
+If runing
+```shell
+systemctl stop apache2
+systemctl disable apache2
+```
+
+### Check for nginx status
+```shell
+service nginx status
+```
+If deactive
+```shell
+nginx -t
+service nginx start
+service nginx restart
+```
 
 ### Install and Configure phpMyAdmin
 
