@@ -3,7 +3,8 @@
 Laravel is a modern PHP framework designed for building robust, scalable web applications. Follow the steps below to deploy a Laravel project on your VPS using Nginx.
 
 ## Configure Laravel application
-Follow the steps to configure your laravel appication on the VPS
+Follow the steps to configure your Laravel application on the VPS.
+Please complete [Basic-Installation](./Basic-Installation.md) if not completed.
 
 ### Create Laravel project directory
 
