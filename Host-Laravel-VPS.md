@@ -72,8 +72,9 @@ nano /etc/nginx/sites-available/yourlaravelsite
 
 ### Add the following configuration:
 
-```shell
+```nginx
 server {
+    client_max_body_size 16M;
     listen 80;
     server_name yourlaravelsite.com www.yourlaravelsite.com;
 
@@ -81,6 +82,7 @@ server {
     index index.php index.html;
 
     location / {
+        client_max_body_size 16M;
         try_files $uri $uri/ /index.php?$query_string;
     }
 
@@ -93,6 +95,7 @@ server {
         deny all;
     }
 }
+
 ```
 
 ### Enable the configuration and reload Nginx:

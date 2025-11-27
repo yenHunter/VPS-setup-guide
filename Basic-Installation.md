@@ -134,7 +134,7 @@ nano /etc/nginx/sites-available/subdomain_for_phpmyadmin.yourdomain.com
 
 Paste the following configuration:
 
-```shell
+```nginx
 server {
     listen 80;
     server_name subdomain_for_phpmyadmin.yourdomain.com;

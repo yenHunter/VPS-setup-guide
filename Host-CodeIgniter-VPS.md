@@ -73,6 +73,7 @@ nano /etc/nginx/sites-available/yourcodeignitersite
 
 ```nginx
 server {
+    client_max_body_size 16M;
     listen 80;
     server_name yourcodeignitersite.com www.yourcodeignitersite.com;
 
@@ -80,6 +81,7 @@ server {
     index index.php index.html;
 
     location / {
+        client_max_body_size 16M;
         try_files $uri $uri/ /index.php?$query_string;
     }
 
